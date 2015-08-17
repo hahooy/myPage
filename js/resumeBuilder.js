@@ -14,11 +14,15 @@ var bio = {
     renderBio: function() {    
 	$("div#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
 	$("div#header").prepend(HTMLheaderName.replace("%data%", bio.name));
-	$("div#header > ul#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
-	$("div#header > ul#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
-	$("div#header > ul#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
-	$("div#header > ul#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.codepen).replace("github", "codepen"));
-	$("div#header > ul#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+	for (var key in bio.contacts) {
+	    var domElement = '<li class="flex-item"><span class="orange-text">' +
+		key +
+		'</span><span class="white-text">' +
+		bio.contacts[key] +
+		'</span></li>';
+	    $("div#header > ul#topContacts").append(domElement);
+	    $("div#lets-connect > ul#footerContacts").append(domElement); 
+	}
 	$("div#header").append(HTMLbioPic.replace("%data%", bio.bioPic));
 	$("div#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
 	$("div#header").append(HTMLskillsStart);
@@ -109,7 +113,7 @@ var projects = {
 	    dates: "2015",
 	    description: "",
 	    image: "images/calculator.png",
-	    url: "http://codepen.io/hahooy/full/zGameP/"
+	    url: "http://codepen.io/hahooy/full/zGemeP/"
 	},
 	{
 	    title: "Random Quote Generator",
