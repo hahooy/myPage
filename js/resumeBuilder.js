@@ -5,7 +5,7 @@ var bio = {
 	email: "huangyongzheng@wustl.edu",
 	mobile: "(540) 239-8537",
 	github: "https://github.com/hahooy",
-	codepen: "http://codepen.io/hahooy/",
+	codepen: "http://codepen.io/hahooy",
 	location: "St Louis"
     },
     bioPic: "images/me.jpg",
@@ -150,8 +150,7 @@ var projects = {
     renderProjects: function() {
 	projects.projects.forEach(function(project) {
 	    $("div#projects").append(HTMLprojectStart);
-	    $("div.project-entry:last").append(HTMLprojectTitle.replace("%data%", project.title)
-					       .replace("#", project.url));
+	    $("div.project-entry:last").append(HTMLprojectTitle.replace("%data%", project.title));
 	    $("div.project-entry:last").append(HTMLprojectDates.replace("%data%", project.dates));
 	    $("div.project-entry:last").append(HTMLprojectDescription.replace("%data%", project.description));
 	    $("div.project-entry:last").append("<a href='"

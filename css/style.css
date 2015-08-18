@@ -222,16 +222,37 @@ span {
     }
 }
 
+div#projects > div.project-entry > p.title{
+    font-size: medium;
+    margin-top: 10px;
+}    
+
+div#projects > div.project-entry > a{
+    /* hide the image overflow when hover */
+    overflow: hidden;
+}
+
+div#projects > div.project-entry > a:hover{
+    box-shadow: 3px 3px 8px 1px;
+}
+
 img.projectImg{
+    padding: 0px;
     width: 260px;
     height: 150px;
+    /* make the zoom in effect more smooth */
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 img.projectImg:hover{
-    box-shadow: 3px 3px 8px 1px;
+    /* zoom in the image when hover */
+    transform: scale(1.3);
 }
 
 div.project-entry{
     display: inline-block;
-    padding: 0 2%;
 }
