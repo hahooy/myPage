@@ -13,21 +13,14 @@ var bio = {
 I live in St Louis. I am a computer science major graduate student at Washington University in St Louis.",
     skills: ["Java", "JavaScript", "HTML", "CSS", "C", "Python"],
     renderBio: function() {
-	$("div#header").prepend(HTMLheaderRole.replace("%data%", ""));
-	$("div#header").prepend(HTMLheaderName.replace("%data%", bio.name));
 	for (var key in bio.contacts) {
-	    var domElement = '<li class="flex-item"><span class="orange-text">' +
+	    var domElement = '<li class="flex-item"><span class="blue-text">' +
 		key +
 		'</span><span class="white-text">' +
 		bio.contacts[key] +
 		'</span></li>';
-	    $("div#header > ul#topContacts").append(domElement);
 	    $("div#lets-connect > ul#footerContacts").append(domElement); 
 	}
-	$("div#header").append(HTMLbioPic.replace("%data%", bio.bioPic));
-	$("div#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
-	$("div#header").append(HTMLskillsStart);
-	bio.skills.forEach(function(skill) {$("ul#skills").append(HTMLskills.replace("%data%", skill));});
     }
 };
 
@@ -165,8 +158,18 @@ function renderMap() {
     $("div#map-div").append(googleMap);
 };
 
+function menuHookUp() {
+    $("div#menu-container > span#close, div#menu-cover").click(function() {
+	$("div#menu-container, div#menu-cover").addClass("trans");
+    });
+    $("div#main > div#header > div#heading-wrapper > span#menu-btn").click(function() {
+	$("div#menu-container, div#menu-cover").removeClass("trans");
+    });
+};
+
 bio.renderBio();
 work.renderWork();
 education.renderSchools();
 projects.renderProjects();
 renderMap();
+menuHookUp();

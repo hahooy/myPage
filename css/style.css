@@ -1,3 +1,5 @@
+/* font margin and padding for elements and classes */
+
 body,
 div,
 ul,
@@ -21,6 +23,8 @@ h6 {
 .education-entry,
 .work-entry,
 .project-entry {
+    margin-top: 0px;
+    margin-bottom: 0px;
     padding: 0 5%;
 }
 
@@ -58,7 +62,6 @@ h3,
 h4,
 h5 {
     padding:10px 5%;
-
 }
 
 
@@ -92,26 +95,12 @@ a {
     display: block;
 }
 
-.welcome-message {
-    font-size: 18px;
-    color: #000000;
-    line-height: 28px;
-}
-
 #skills-h3 {
     color: #1199c3;
     display: none;
 }
 
-.orange {
-    background-color: #f5ae23;
-}
-
 .blue-text {
-    color: #1199c3;
-}
-
-.orange-text {
     color: #1199c3;
 }
 
@@ -120,8 +109,8 @@ a {
     color: #000000;
 }
 
-.gray {
-    background-color: #f3f3f3;
+.gray { 
+    background-color: #F3F3F3; /* dark background color */
     padding-bottom: 10px;
     clear:both;
 }
@@ -130,23 +119,12 @@ a {
     background-color: #4a4a4a;
 }
 
-div#header > ul#topContacts, div#lets-connect > ul#footerContacts{
-    width: 100%;
+span {
+    padding: 5px; 
 }
 
-div#lets-connect > ul#footerContacts{
-    margin-left: 5%;
-}
-
-div#header > ul#topContacts:after, div#lets-connect > ul#footerContacts:after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-div#header > ul#topContacts > li, div#lets-connect > ul#footerContacts > li{
-    float: left;
-    padding: 10px 0;
+#lets-connect {
+    text-align: center;
 }
 
 .center-content {
@@ -157,25 +135,157 @@ ul {
     list-style-type: none;
 }
 
-.biopic {
+/* style footer */
+div#lets-connect > ul#footerContacts{
+    width: 100%;
+}
+
+div#lets-connect > ul#footerContacts{
+    margin-left: 5%;
+}
+
+div#lets-connect > ul#footerContacts:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div#lets-connect > ul#footerContacts > li{
     float: left;
-    padding: 10px;
-    width: 200px;
-    height: 200px;
+    padding: 10px 0;
+}
+
+/* style header content */
+div#header > div#bio-wrapper{
+    margin-top: 20px;
+}
+
+.biopic {
+    margin-right: 20px;
+    float: left;
+    width: 220px;
+    height: 220px;
+}
+
+div#header > div#bio-wrapper > p{
+    font-size: medium;
+}
+
+/* style projects content */
+div#projects > div.project-entry img.projectImg{
+   padding: 10px 0px; 
+}
+
+
+div#projects > div.project-entry > p.title{
+    font-size: medium;
+    margin-top: 10px;
+}    
+
+div#projects > div.project-entry > a{
+    /* hide the image overflow when hover */
+    overflow: hidden;
+}
+
+div#projects > div.project-entry > a:hover{
+    box-shadow: 3px 3px 8px 1px;
+}
+
+img.projectImg{
+    padding: 0px;
+    width: 260px;
+    height: 150px;
+    /* make the zoom in effect more smooth */
+    -moz-transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+img.projectImg:hover{
+    /* zoom in the image when hover */
+    transform: scale(1.3);
+}
+
+div.project-entry{
+    display: inline-block;
+}
+
+/* style the drop down menu */
+
+div#menu-container{
+    position: fixed;
+    right: 0px;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(231, 211, 45, 0.5);
+    z-index: 2;
+}
+
+div#menu-container > div{
+    background-color: rgba(255, 150, 45, 0.5);
+    margin: 2px 0px;
+    padding: 5% 20%;
+    font-size: large;
+    font-weight: bold;
+}
+
+div#menu-container > div > a{
+    color: rgb(255,255,255);
+}
+
+div#menu-cover{
+    position: fixed;
+    background-color: rgba(231, 211, 45, 0.05);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* control buttons for the dropdown menu */
+span#menu-btn, span#close{
+    font-size: 28px;
+}
+
+span#menu-btn:hover, span#close:hover{
+    cursor: pointer;		     
+}
+
+div#menu-container > span#close{
+    display: inline-block;
+    padding-top: 5%;
+    padding-bottom: 30%;
+}
+
+/* make the menu disappear */
+.trans{
     display: none;
 }
 
-img {
-    padding: 10px;
+/* adjust the header */
+div#main > div#header > div#heading-wrapper:after{
+    content: "";
+    display: table;
+    clear: both;
 }
 
-span {
-    padding: 5px;
+div#main > div#header > div#heading-wrapper{
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(153, 153, 153);
 }
 
-#lets-connect {
-    text-align: center;
+div#main > div#header > div#heading-wrapper > span#menu-btn{
+    float: right;
+    display: inline-block;
 }
+
+div#main > div#header > div#heading-wrapper >  span#name{
+    float: left;
+    font-size: 28px;
+    color: #1199c3;
+}
+
 
 /* Media queries to handle various device widths */
 
@@ -220,39 +330,4 @@ span {
     .biopic {
 	display: block;
     }
-}
-
-div#projects > div.project-entry > p.title{
-    font-size: medium;
-    margin-top: 10px;
-}    
-
-div#projects > div.project-entry > a{
-    /* hide the image overflow when hover */
-    overflow: hidden;
-}
-
-div#projects > div.project-entry > a:hover{
-    box-shadow: 3px 3px 8px 1px;
-}
-
-img.projectImg{
-    padding: 0px;
-    width: 260px;
-    height: 150px;
-    /* make the zoom in effect more smooth */
-    -moz-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -ms-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-}
-
-img.projectImg:hover{
-    /* zoom in the image when hover */
-    transform: scale(1.3);
-}
-
-div.project-entry{
-    display: inline-block;
 }
