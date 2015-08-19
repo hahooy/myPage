@@ -1,5 +1,4 @@
-/* font margin and padding for elements and classes */
-
+/* font, margin and padding for elements and classes */
 body,
 div,
 ul,
@@ -219,25 +218,27 @@ div#menu-container{
     right: 0px;
     width: 25%;
     height: 100%;
-    background-color: rgba(231, 211, 45, 0.5);
+    background-color: rgba(38, 119, 185, 0.5);
     z-index: 2;
 }
 
-div#menu-container > div{
-    background-color: rgba(255, 150, 45, 0.5);
+div#menu-container > a{
+    background-color: rgba(63, 66, 69, 0.5);
+    color: rgb(255,255,255);
     margin: 2px 0px;
     padding: 5% 20%;
     font-size: large;
     font-weight: bold;
 }
 
-div#menu-container > div > a{
-    color: rgb(255,255,255);
+div#menu-container > a:hover{
+    background-color: rgba(255, 255, 255, 1);
+    color: rgb(63, 66, 69);
 }
 
 div#menu-cover{
     position: fixed;
-    background-color: rgba(231, 211, 45, 0.05);
+    background-color: rgba(38, 119, 185, 0.05);
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -250,6 +251,10 @@ span#menu-btn, span#close{
 
 span#menu-btn:hover, span#close:hover{
     cursor: pointer;		     
+		     }
+
+span#close:hover{
+    color: rgb(255,255,255);
 }
 
 div#menu-container > span#close{
