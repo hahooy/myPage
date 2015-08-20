@@ -32,8 +32,8 @@ var bio = {
 var menu = {
     items: {
 	Home: "http://hahooy.github.io/myPage/", // title: url
-	Contact: "#",
-	Resume: "#",
+	Contact: "contact.html",
+	Resume: "https://drive.google.com/open?id=0B1uHglPYIL0yUjV3SWh2ZVJvTTQ",
 	Github: "https://github.com/hahooy/",
 	CodePen: "http://codepen.io/hahooy/"
     },
@@ -185,7 +185,7 @@ function menuHookUp() {
     $("div#menu-container > span#close, div#menu-cover").click(function() {
 	$("div#menu-container, div#menu-cover").addClass("trans");
     });
-    $("div#main > div#header > div#heading-wrapper > span#menu-btn").click(function() {
+    $("div#heading-wrapper > span#menu-btn").click(function() {
 	$("div#menu-container, div#menu-cover").removeClass("trans");
     });
 };

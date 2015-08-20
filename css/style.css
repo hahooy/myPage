@@ -1,4 +1,4 @@
-/* font, margin and padding for elements and classes */
+/* font, margin and padding applied to all pages */
 body,
 div,
 ul,
@@ -21,6 +21,7 @@ h6 {
 
 .education-entry,
 .work-entry,
+.contact-entry,
 .project-entry {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -268,29 +269,38 @@ div#menu-container > span#close:hover{
     color: rgb(255,255,255);
 }
 
-/* make the menu disappear */
+/* make the element(e.g. menu, header) disappear */
 .trans{
     display: none;
 }
 
-/* adjust the header */
-div#main > div#header > div#heading-wrapper:after{
+/* adjust the heading */
+div#heading-wrapper:after{
     content: "";
     display: table;
     clear: both;
 }
 
-div#main > div#header > div#heading-wrapper{
+div#heading-wrapper{
+    background-color: white;
+    height: 50px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid rgb(153, 153, 153);
 }
 
-div#main > div#header > div#heading-wrapper > span#menu-btn{
+div#heading-wrapper > span#menu-btn{
     float: right;
     display: inline-block;
 }
 
-div#main > div#header > div#heading-wrapper >  span#name{
+div#heading-wrapper >  span#name{
     float: left;
     font-size: 28px;
     color: #1199c3;
