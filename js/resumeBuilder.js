@@ -190,6 +190,43 @@ function menuHookUp() {
     });
 };
 
+// navbar disappears when scroll down and shows up when scroll up
+function headerScrollControl() {
+    var isScrolled = false,
+	lastScrollTop = 0,
+	delta = 5,
+	navbarHeight = $("div#heading-wrapper").outerHeight();
+
+    $(window).scroll(function() {
+	isScrolled = true;
+    });
+
+    window.setInterval(function() {
+	if (isScrolled) {
+	    changeNav();
+	} else {
+	    return;
+	}
+    }, 250);
+
+    function changeNav() {
+	var currentScrollTop = $(this).scrollTop(),
+	    $navbar = $("div#heading-wrapper");
+
+	// scroll down
+	if (Math.abs(currentScrollTop - lastScrollTop) > delta &&
+	    currentScrollTop > navbarHeight) {
+	    $navbar.addClass("trans");
+	}
+	// scroll up
+	if (currentScrollTop < lastScrollTop && lastScrollTop - currentScrollTop > delta) {
+	    $navbar.removeClass("trans");
+	}
+	// update the scrollTop value of the element
+	lastScrollTop = currentScrollTop;
+    };
+};
+
 bio.renderBio();
 work.renderWork();
 education.renderSchools();
@@ -197,3 +234,4 @@ projects.renderProjects();
 renderMap();
 menuHookUp();
 menu.renderMenu();
+headerScrollControl();

@@ -155,8 +155,8 @@ div#lets-connect > ul#footerContacts > li{
 }
 
 /* style header content */
-div#header > div#bio-wrapper{
-    margin-top: 20px;
+div#header {
+    padding-top: 100px;
 }
 
 .biopic {
@@ -166,7 +166,7 @@ div#header > div#bio-wrapper{
     height: 220px;
 }
 
-div#header > div#bio-wrapper > p{
+div#header > p{
     font-size: medium;
 }
 
@@ -282,7 +282,7 @@ div#heading-wrapper:after{
 }
 
 div#heading-wrapper{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     height: 50px;
     position: fixed;
     top: 0px;
