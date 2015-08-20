@@ -134,11 +134,6 @@ ul {
     list-style-type: none;
 }
 
-/* margin between header and content */
-div#projects{
-    padding-top: 2%;
-}
-
 /* style footer */
 div#lets-connect > ul#footerContacts{
     width: 100%;
@@ -162,6 +157,7 @@ div#lets-connect > ul#footerContacts > li{
 /* style header content */
 div#header {
     padding-top: 100px;
+    margin-bottom: 2%;
 }
 
 .biopic {
