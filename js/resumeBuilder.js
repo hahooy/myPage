@@ -9,20 +9,43 @@ var bio = {
 	location: "St Louis"
     },
     bioPic: "images/me.jpg",
-    welcomeMessage: "Hello, you have reached the web page of Yongzheng Huang. \
-I live in St Louis. I am a computer science major graduate student at Washington University in St Louis.",
-    skills: ["Java", "JavaScript", "HTML", "CSS", "C", "Python"],
+    welcomeMessage: "Hello, you have reached the web page of Yongzheng Huang. I live in St Louis. I am a computer science major graduate student at Washington University in St Louis.",
+    skills: "Java, JavaScript, HTML, CSS, C, Python",
     renderBio: function() {
-	for (var key in bio.contacts) {
+	// render header
+	$("span#menu-btn").text("menu");
+	$("span#name").text(this.name);
+	$("p#welcome-msg").text(this.welcomeMessage);
+	$("p#skills").text(this.skills);
+	// render footer
+	for (var key in this.contacts) {
 	    var domElement = '<li class="flex-item"><span class="blue-text">' +
-		key +
-		'</span><span class="white-text">' +
-		bio.contacts[key] +
-		'</span></li>';
+		    key +
+		    '</span><span class="white-text">' +
+		    this.contacts[key] +
+		    '</span></li>';
 	    $("div#lets-connect > ul#footerContacts").append(domElement); 
 	}
     }
 };
+
+var menu = {
+    items: {
+	Home: "http://hahooy.github.io/myPage/", // title: url
+	Contact: "#",
+	Resume: "#",
+	Github: "https://github.com/hahooy/",
+	CodePen: "http://codepen.io/hahooy/"
+    },
+    renderMenu: function() {
+	for(var key in this.items) {
+	    // append <a href="http://hahooy.github.io/myPage/">Home</a>
+	    var link = "<a href='" + this.items[key] + "'>" +
+		    key + "</a>";
+	    $("div#menu-container").append(link);
+	}
+    }
+};    
 
 var education = {
     schools: [
@@ -52,7 +75,7 @@ var education = {
 	},
     ],
     renderSchools: function() {
-	education.schools.forEach(function(school) {
+	this.schools.forEach(function(school) {
 	    $("div#education").append(HTMLschoolStart);
 	    $("div.education-entry:last").append(
 		HTMLschoolName.replace("%data%", school.name).replace("#", school.url)
@@ -75,7 +98,7 @@ var work = {
 	}
     ],
     renderWork: function() {
-	work.jobs.forEach(function(job) {
+	this.jobs.forEach(function(job) {
 	    $("div#workExperience").append(HTMLworkStart);
 	    $("div.work-entry:last").append(HTMLworkEmployer.replace("%data%", job.employer) +
 					    HTMLworkTitle.replace("%data%", job.title));
@@ -141,7 +164,7 @@ var projects = {
     ],
 
     renderProjects: function() {
-	projects.projects.forEach(function(project) {
+	this.projects.forEach(function(project) {
 	    $("div#projects").append(HTMLprojectStart);
 	    $("div.project-entry:last").append(HTMLprojectTitle.replace("%data%", project.title));
 	    $("div.project-entry:last").append(HTMLprojectDates.replace("%data%", project.dates));
@@ -173,3 +196,4 @@ education.renderSchools();
 projects.renderProjects();
 renderMap();
 menuHookUp();
+menu.renderMenu();

@@ -78,7 +78,6 @@ h5 {
     color: #999;
     line-height: 16px;
     float: right;
-
 }
 
 p {
@@ -175,7 +174,6 @@ div#projects > div.project-entry img.projectImg{
    padding: 10px 0px; 
 }
 
-
 div#projects > div.project-entry > p.title{
     font-size: medium;
     margin-top: 10px;
@@ -191,7 +189,6 @@ div#projects > div.project-entry > a:hover{
 }
 
 img.projectImg{
-    padding: 0px;
     width: 260px;
     height: 150px;
     /* make the zoom in effect more smooth */
@@ -207,7 +204,9 @@ img.projectImg:hover{
     transform: scale(1.3);
 }
 
-div.project-entry{
+div#projects > div.project-entry{
+    padding-left: 5%;
+    padding-right: 0;
     display: inline-block;
 }
 
@@ -245,22 +244,28 @@ div#menu-cover{
 }
 
 /* control buttons for the dropdown menu */
-span#menu-btn, span#close{
+div#heading-wrapper > span#menu-btn{
     font-size: 28px;
+    border: 3px solid black;
 }
 
-span#menu-btn:hover, span#close:hover{
+div#heading-wrapper > span#menu-btn:hover{
     cursor: pointer;		     
-		     }
-
-span#close:hover{
-    color: rgb(255,255,255);
+    color: rgb(17, 153, 195);
+    border: 3px solid rgb(17, 153, 195);
 }
 
 div#menu-container > span#close{
+    font-size: 28px;
     display: inline-block;
-    padding-top: 5%;
-    padding-bottom: 30%;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-bottom: 30%;
+}
+
+div#menu-container > span#close:hover{
+    cursor: pointer;		     
+    color: rgb(255,255,255);
 }
 
 /* make the menu disappear */
