@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Resume</title>
+  <link href="css/style.css" rel="stylesheet">
+<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+  <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+  <!-- drop down menu -->
+  <div id="menu-container" class="trans">
+    <span id="close" class="">X</span>
+    <!-- <a href="#"></a> -->
+  </div>
+  <div id="menu-cover" class="trans"></div>
+
+  <!-- main content of the website -->
+  <div id="main">
+    <div id="header" class="center-content clear-fix gray">
+      <div id="heading-wrapper">
+	<span id="menu-btn" class=""></span>
+	<span id="name"></span>
+      </div>
+    </div>
+    <div id="projects">
+      <h2>Projects I've Enjoy</h2>
+    </div>
+  </div>
+
+  <script src="js/jQuery.js"></script>
+  <script src="js/helper.js"></script>
+  <script src="js/resumeBuilder.js"></script>
+</body>
+</html>
