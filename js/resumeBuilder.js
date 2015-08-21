@@ -165,7 +165,7 @@ var projects = {
 
     renderProjects: function() {
 	this.projects.forEach(function(project) {
-	    $("div#projects").append(HTMLprojectStart);
+	    $("div#projects-wrapper").append(HTMLprojectStart);
 	    $("div.project-entry:last").append(HTMLprojectTitle.replace("%data%", project.title));
 	    $("div.project-entry:last").append(HTMLprojectDates.replace("%data%", project.dates));
 	    $("div.project-entry:last").append(HTMLprojectDescription.replace("%data%", project.description));
