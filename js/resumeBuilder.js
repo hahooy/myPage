@@ -2,11 +2,11 @@ var bio = {
     name: "Yongzheng Huang",
     role: "Masters student majoring in Computer Science",
     contacts: {
-	email: "huangyongzheng@wustl.edu",
-	mobile: "(540) 239-8537",
-	github: "https://github.com/hahooy",
-	codepen: "http://codepen.io/hahooy",
-	location: "St Louis"
+	Email: "huangyongzheng@wustl.edu",
+	Mobile: "(540) 239-8537",
+	GitHub: "https://github.com/hahooy",
+	CodePen: "http://codepen.io/hahooy",
+	Location: "St Louis"
     },
     bioPic: "images/me.jpg",
     welcomeMessage: "Hello, you have reached the web page of Yongzheng Huang. I live in St Louis. I am a computer science major graduate student at Washington University in St Louis.",
@@ -21,7 +21,7 @@ var bio = {
 	for (var key in this.contacts) {
 	    var domElement = '<li class="flex-item"><span class="blue-text">' +
 		    key +
-		    '</span><span class="white-text">' +
+		    '</span><span>' +
 		    this.contacts[key] +
 		    '</span></li>';
 	    $("div#lets-connect > ul#footerContacts").append(domElement); 
