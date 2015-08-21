@@ -288,6 +288,7 @@ div#heading-wrapper{
     padding-right: 5%;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-bottom: 1px solid rgb(153, 153, 153);
 }
 
 div#heading-wrapper >  span#name{
