@@ -221,7 +221,7 @@ div#projects > div.project-entry{
 div#menu-container{
     position: fixed;
     right: 0px;
-    width: 20%;
+    width: 200px;
     height: 100%;
     background-color: rgba(38, 119, 185, 0.5);
     z-index: 2;
@@ -249,18 +249,6 @@ div#menu-cover{
     z-index: 1;
 }
 
-/* control buttons for the dropdown menu */
-div#heading-wrapper > span#menu-btn{
-    font-size: 28px;
-    border: 3px solid black;
-}
-
-div#heading-wrapper > span#menu-btn:hover{
-    cursor: pointer;		     
-    color: #3D9CCC;
-    border: 3px solid rgb(17, 153, 195);
-}
-
 div#menu-container > span#close{
     font-size: 28px;
     display: inline-block;
@@ -279,7 +267,7 @@ div#menu-container > span#close:hover{
     display: none;
 }
 
-/* adjust the heading */
+/* navigation bar */
 div#heading-wrapper:after{
     content: "";
     display: table;
@@ -288,7 +276,6 @@ div#heading-wrapper:after{
 
 div#heading-wrapper{
     background-color: rgba(255, 255, 255, 0.7);
-    height: 50px;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -300,16 +287,23 @@ div#heading-wrapper{
     border-bottom: 1px solid rgb(153, 153, 153);
 }
 
+div#heading-wrapper >  span#name{
+    float: left;
+    font-size: 24px;
+}
+
 div#heading-wrapper > span#menu-btn{
     float: right;
     display: inline-block;
+    font-size: 24px;
 }
 
-div#heading-wrapper >  span#name{
-    float: left;
-    font-size: 28px;
+div#heading-wrapper > span#menu-btn:hover{
+    cursor: pointer;		     
+    color: #3D9CCC;
+    box-sizing: border-box;
+    border: 2px solid #3D9CCC;
 }
-
 
 /* Media queries to handle various device widths */
 
@@ -337,6 +331,13 @@ div#heading-wrapper >  span#name{
     }
 }
 
+@media only screen and (min-width: 750px) {
+    #skills-h3,
+    .biopic {
+	display: block;
+    }
+}
+
 #map {
     display: block;
     height: 100%;
@@ -349,9 +350,3 @@ div#heading-wrapper >  span#name{
     padding-bottom: 5%;
 }
 
-@media only screen and (min-width: 750px) {
-    #skills-h3,
-    .biopic {
-	display: block;
-    }
-}
