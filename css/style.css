@@ -295,6 +295,15 @@ div#heading-wrapper >  span#name{
     font-size: 24px;
 }
 
+div#heading-wrapper >  span#name > a{
+    margin: 0px;
+    color: #000;
+}
+
+div#heading-wrapper >  span#name > a:hover{
+    color: #3D9CCC; 
+}
+
 div#heading-wrapper > span#menu-btn{
     float: right;
     display: inline-block;

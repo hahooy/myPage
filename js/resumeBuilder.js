@@ -14,7 +14,7 @@ var bio = {
     renderBio: function() {
 	// render header
 	$("span#menu-btn").text("menu");
-	$("span#name").text(this.name);
+	$("span#name").append("<a href='" + menu.items.Home + "'>" + this.name + "</a>");
 	$("p#welcome-msg").text(this.welcomeMessage);
 	$("p#skills").text(this.skills);
 	// render footer
