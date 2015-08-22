@@ -214,7 +214,7 @@ function headerScrollControl() {
 	    $navbar = $("div#heading-wrapper");
 
 	// scroll down
-	if (Math.abs(currentScrollTop - lastScrollTop) > delta &&
+	if (currentScrollTop - lastScrollTop > delta &&
 	    currentScrollTop > navbarHeight) {
 	    $navbar.addClass("trans");
 	}

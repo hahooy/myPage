@@ -284,6 +284,7 @@ div#heading-wrapper{
     top: 0px;
     left: 0px;
     right: 0px;
+    z-index: 1; /* make sure it is not cover by images of projects */
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 10px;
