@@ -136,7 +136,7 @@ var projects = {
 	    title: "Random Quote Generator",
 	    dates: "2015",
 	    description: "",
-	    image: "images/quoteGen.png",
+	    image: "images/randomQuoteGen.png",
 	    url: "http://codepen.io/hahooy/full/gpdWLM/"
 	},
 	{
