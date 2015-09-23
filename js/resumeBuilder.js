@@ -126,6 +126,13 @@ var projects = {
 	    url: "http://codepen.io/hahooy/full/vOVoyj/"
 	},
 	{
+	    title: "UniSound",
+	    dates: "2015",
+	    description: "",
+	    image: "images/blackSquareLogo.png",
+	    url: "http://vingkan.github.io/wuhack/"
+	},
+	{
 	    title: "Web Calculator",
 	    dates: "2015",
 	    description: "",
