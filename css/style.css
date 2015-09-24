@@ -175,6 +175,10 @@ div#header > h3{
 }
 
 /* style projects content */
+#projects-wrapper > div.project-entry{
+    width: 260px;
+}
+
 #projects-wrapper > div > p.title{
     font-size: 18px;
 }
