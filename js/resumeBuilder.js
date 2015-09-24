@@ -128,7 +128,7 @@ var projects = {
 	{
 	    title: "UniSound",
 	    dates: "2015",
-	    description: "<strong>Awarded AT&T Prize for Best Mobile App</strong>",
+	    description: "<strong>Awarded AT&T Prize for Best Mobile App at WUHack 2015</strong>",
 	    image: "images/blackSquareLogo.png",
 	    url: "http://vingkan.github.io/wuhack/"
 	},
