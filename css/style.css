@@ -175,15 +175,9 @@ div#header > h3{
 }
 
 /* style projects content */
-
-div#projects > div.project-entry img.projectImg{
-   padding: 10px 0px; 
+#projects-wrapper > div > p.title{
+    font-size: 18px;
 }
-
-div.project-entry > p.title{
-    font-size: large;
-    margin-top: 10px;
-}    
 
 div.project-entry > a{
     /* hide the image overflow when hover */

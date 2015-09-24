@@ -33,7 +33,7 @@ var menu = {
     items: {
 	Home: "http://hahooy.github.io/myPage/", // title: url
 	Contact: "contact.html",
-	Resume: "https://drive.google.com/file/d/0B1uHglPYIL0yMnhlTkxxN1lYV0U/view?usp=sharing",
+	Resume: "https://drive.google.com/file/d/0B1uHglPYIL0yTmUyd3pEQjVyRjg/view?usp=sharing",
 	Github: "https://github.com/hahooy/",
 	CodePen: "http://codepen.io/hahooy/"
     },
@@ -128,7 +128,7 @@ var projects = {
 	{
 	    title: "UniSound",
 	    dates: "2015",
-	    description: "",
+	    description: "<strong>Awarded AT&T Prize for Best Mobile App</strong>",
 	    image: "images/blackSquareLogo.png",
 	    url: "http://vingkan.github.io/wuhack/"
 	},
