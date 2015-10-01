@@ -130,7 +130,7 @@ var projects = {
 	    dates: "2015",
 	    description: "<strong>Awarded AT&T Prize for Best Mobile App at WUHack 2015</strong>",
 	    image: "images/blackSquareLogo.png",
-	    url: "http://vingkan.github.io/wuhack/"
+	    url: "http://hahooy.github.io/wuhack2015/"
 	},
 	{
 	    title: "Web Calculator",
