@@ -133,6 +133,13 @@ var projects = {
 	    url: "http://hahooy.github.io/wuhack2015/"
 	},
 	{
+	    title: "Tic-Tac-Toe",
+	    dates: "2015",
+	    description: "",
+	    image: "images/tictactoe.png",
+	    url: "http://hahooy.github.io/Tic-Tac-Toe/"
+	},
+	{
 	    title: "Web Calculator",
 	    dates: "2015",
 	    description: "",
