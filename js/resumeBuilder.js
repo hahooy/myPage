@@ -33,7 +33,7 @@ var menu = {
     items: {
 	Home: "http://hahooy.github.io/myPage/", // title: url
 	Contact: "contact.html",
-	Resume: "https://drive.google.com/file/d/0B1uHglPYIL0yZkF5R1Q2VjhnSGc/view?usp=sharing"
+	Resume: "https://drive.google.com/file/d/0B1uHglPYIL0yZkF5R1Q2VjhnSGc/view?usp=sharing",
 	Github: "https://github.com/hahooy/",
 	CodePen: "http://codepen.io/hahooy/"
     },
