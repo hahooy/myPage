@@ -10,7 +10,7 @@ var bio = {
     },
     bioPic: "images/me.jpg",
     welcomeMessage: "Hello, you have reached the web page of Yongzheng Huang. I live in St Louis. I am a computer science major graduate student at Washington University in St Louis.",
-    skills: "Java, JavaScript, HTML, CSS, C, Python, Hadoop",
+    skills: "Java, Python, JavaScript, HTML, CSS, C, Hadoop",
     renderBio: function() {
 	// render header
 	$("span#menu-btn").text("menu");
@@ -33,7 +33,7 @@ var menu = {
     items: {
 	Home: "http://hahooy.github.io/myPage/", // title: url
 	Contact: "contact.html",
-	Resume: "https://drive.google.com/file/d/0B1uHglPYIL0yTmUyd3pEQjVyRjg/view?usp=sharing",
+	Resume: "https://drive.google.com/file/d/0B1uHglPYIL0yZkF5R1Q2VjhnSGc/view?usp=sharing"
 	Github: "https://github.com/hahooy/",
 	CodePen: "http://codepen.io/hahooy/"
     },
