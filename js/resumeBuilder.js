@@ -10,7 +10,7 @@ var bio = {
     },
     bioPic: "images/me.jpg",
     welcomeMessage: "Hello, you have reached the web page of Yongzheng Huang. I live in St Louis. I am a computer science major graduate student at Washington University in St Louis.",
-    skills: "Java, Python, JavaScript, HTML, CSS, C, Hadoop",
+    skills: "Java, Python, JavaScript, HTML, CSS, C, Hadoop, PowerShell, LDAP, VDS",
     renderBio: function() {
 	// render header
 	$("span#menu-btn").text("menu");
