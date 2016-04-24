@@ -10,7 +10,7 @@ var bio = {
     },
     bioPic: "images/me.jpg",
     welcomeMessage: "Hello, you have reached the web page of Yongzheng Huang. I live in St Louis. I am a computer science major graduate student at Washington University in St Louis.",
-    skills: "Java, Python, JavaScript, HTML, CSS, C, Hadoop, PowerShell, LDAP, VDS",
+    skills: "Java, Python, JavaScript, Swift, HTML, CSS, C, Hadoop, LDAP, VDS",
     renderBio: function() {
 	// render header
 	$("span#menu-btn").text("menu");
@@ -137,7 +137,7 @@ var projects = {
 	    dates: "2015",
 	    description: "",
 	    image: "images/tictactoe.png",
-	    url: "http://hahooy.github.io/Tic-Tac-Toe/"
+	    url: "tic-tac-toe-online.herokuapp.com"
 	},
 	{
 	    title: "Web Calculator",
