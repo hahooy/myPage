@@ -137,7 +137,7 @@ var projects = {
 	    dates: "2015",
 	    description: "",
 	    image: "images/tictactoe.png",
-	    url: "tic-tac-toe-online.herokuapp.com"
+	    url: "http://tic-tac-toe-online.herokuapp.com"
 	},
 	{
 	    title: "Web Calculator",
