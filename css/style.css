@@ -154,7 +154,7 @@ div#lets-connect > ul#footerContacts > li{
 }
 
 /* style header content */
-div#header {
+#about {
     padding-top: 100px;
     margin-bottom: 2%;
 }
@@ -166,11 +166,11 @@ div#header {
     height: 220px;
 }
 
-div#header > p{
+#about > p{
     font-size: medium;
 }
 
-div#header > h3{
+#about > h3{
     padding-top: 30px;
 }
 
@@ -270,47 +270,33 @@ div#menu-container > span#close:hover{
 }
 
 /* navigation bar */
-div#heading-wrapper:after{
+#heading-wrapper:after{
     content: "";
     display: table;
     clear: both;
 }
 
-div#heading-wrapper{
+#heading-wrapper{
     background-color: rgba(255, 255, 255, 1);
+    background-image: none;
     position: fixed;
     top: 0px;
     left: 0px;
     right: 0px;
     z-index: 1; /* make sure it is not cover by images of projects */
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 10px;
-    padding-bottom: 10px;
     border-bottom: 1px solid rgb(153, 153, 153);
 }
 
-div#heading-wrapper >  span#name{
-    float: left;
+#name{
     font-size: 24px;
-}
-
-div#heading-wrapper >  span#name > a{
-    margin: 0px;
     color: #000;
 }
 
-div#heading-wrapper >  span#name > a:hover{
+#name:hover{
     color: #3D9CCC; 
 }
 
-div#heading-wrapper > span#menu-btn{
-    float: right;
-    display: inline-block;
-    font-size: 24px;
-}
-
-div#heading-wrapper > span#menu-btn:hover{
+#menu-btn:hover{
     cursor: pointer;		     
     color: #3D9CCC;
     box-sizing: border-box;

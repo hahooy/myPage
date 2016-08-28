@@ -35,7 +35,8 @@ var menu = {
 	Contact: "contact.html",
 	Resume: "https://drive.google.com/file/d/0B1uHglPYIL0yZkF5R1Q2VjhnSGc/view?usp=sharing",
 	Github: "https://github.com/hahooy/",
-	CodePen: "http://codepen.io/hahooy/"
+	CodePen: "http://codepen.io/hahooy/",
+	GOTO: "#education"
     },
     renderMenu: function() {
 	for(var key in this.items) {
@@ -199,7 +200,7 @@ function menuHookUp() {
     $("div#menu-container > span#close, div#menu-cover").click(function() {
 	$("div#menu-container, div#menu-cover").addClass("trans");
     });
-    $("div#heading-wrapper > span#menu-btn").click(function() {
+    $("#heading-wrapper > span#menu-btn").click(function() {
 	$("div#menu-container, div#menu-cover").removeClass("trans");
     });
 };
@@ -209,7 +210,7 @@ function headerScrollControl() {
     var isScrolled = false,
 	lastScrollTop = 0,
 	delta = 5,
-	navbarHeight = $("div#heading-wrapper").outerHeight();
+	navbarHeight = $("#heading-wrapper").outerHeight();
 
     $(window).scroll(function() {
 	isScrolled = true;
@@ -225,7 +226,7 @@ function headerScrollControl() {
 
     function changeNav() {
 	var currentScrollTop = $(this).scrollTop(),
-	    $navbar = $("div#heading-wrapper");
+	    $navbar = $("#heading-wrapper");
 
 	// scroll down
 	if (currentScrollTop - lastScrollTop > delta &&

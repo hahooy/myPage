@@ -1,0 +1,23 @@
+{
+  "name": "my-github-io",
+  "homepage": "https://github.com/hahooy/myPage",
+  "authors": [
+    "Yongzheng Huang <iamhuangyz@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.6.3",
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.7"
+  }
+}

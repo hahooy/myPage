@@ -3,9 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>Resume</title>
-  <link href="css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-	      rel="stylesheet">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Customized Stylesheet-->
+  <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width">
 </head>
 
@@ -13,19 +17,33 @@
   <!-- drop down menu -->
   <div id="menu-container" class="trans">
     <span id="close" class="material-icons">close</span>
-    <!-- <a href="#"></a> -->
   </div>
   <div id="menu-cover" class="trans"></div>
 
   <!-- main content of the website -->
   <div id="main">
     <!-- navigation bar -->
-    <div id="heading-wrapper">
-      <span id="menu-btn" class="material-icons"></span>
-      <span id="name"></span>
-    </div>
+    <nav id="heading-wrapper" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button id="menu-btn" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+          <a id="name" class="navbar-brand" href="#myPage">Yongzheng Huang</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#aboutt">ABOUT</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#education">EXPERIENCE</a></li>
+            <li><a href="#map-div">MAP</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <!-- bio information -->
-    <div id="header" class="center-content clear-fix gray">
+    <div id="about" class="center-content clear-fix gray">
       <img class="biopic" src="images/me.jpg">
       <p id="welcome-msg"></p>
       <h3 class="blue-text">My Toolbox:</h3>
@@ -50,9 +68,14 @@
     </div>
   </div>
 
-  <script src="js/jQuery.js"></script>
-  <script src="js/helper.js"></script>
+  <!-- jQuery has to come first because it is a dependent of other js files. -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Bootsrap js -->
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- Google maps api -->
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <!-- Customized js -->
+  <script src="js/helper.js"></script>
   <script src="js/resumeBuilder.js"></script>
 </body>
 </html>
