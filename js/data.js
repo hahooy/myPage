@@ -121,9 +121,23 @@ var resumeData = {
                 {
                     title: "Angler Companian",
                     dates: "2016",
-                    description: "Angler Companian is a photo and location sharing iOS social app for anglers. Featuring channels, real-time photo and location sharing, length measurement on photo and more. Recording your fishing spots and sharing your exciting moments have never been this easy!",
+                    description: "Angler Companion is a photo and location sharing iOS social app for anglers. Featuring channels, real-time photo and location sharing, length measurement on photo and more. Recording your fishing spots and sharing your exciting moments have never been this easy!",
                     image: "images/locatorcam.jpg",
                     url: "http://hahooy.github.io/LocatorCam/"
+                },
+                {
+                    title: "Amber",
+                    dates: "2016",
+                    description: "Amber is a web application I developed in Monsanto for employees’ information lookup. I made significant contribution to this site's user authentication, front-end functionalities and back-end data storage.",
+                    image: "images/amber.png",
+                    url: "https://radiant-citadel-90691.herokuapp.com"
+                },
+                {
+                    title: "passport-ping-oauth2",
+                    dates: "2016",
+                    description: "I contributed to this open source project when I was an Co-Op in Monsanto. This npm library lets you authenticate using PingFederate's OAuth2 service in your node.js applications. You can find out more details about this project by clicking on the image below.",
+                    image: "images/passport-ping-oauth2.png",
+                    url: "https://www.npmjs.com/package/passport-ping-oauth2"
                 },
                 {
                     title: "UniSound",
@@ -132,17 +146,17 @@ var resumeData = {
                     image: "images/blackSquareLogo.png",
                     url: "http://hahooy.github.io/wuhack2015/"
                 },
-              {
+                {
                     title: "Movie Recommendation System",
                     dates: "2015",
                     description: "A movie recommendation system for predicting movie ratings of given users. The recommendation system is based on an item-item collabrative filtering algorithm implemented in Hadoop MapReduce. The training data set contains 3.25 million movie ratings provided by Netflix. How good is the algorithm? The root mean square error of the prediction is 0.92, which is the best among the class of 40+ students.",
                     image: "images/movie_ratings.png",
-                    url: "http://hahooy.github.io/wuhack2015/"
+                    url: "https://github.com/hahooy/Item-Based-CF-Netflix/"
                 },
                 {
                     title: "Tic-Tac-Toe Online",
                     dates: "2015",
-                    description: "Yet another tic tac toe? This is a somewhat arguably and debatable more advanced tic tac toe because it uses socket.io to enable real-time game states sharing among players. In other word, this is an online version! Simply share the link with your opponent and you are good to go!",
+                    description: "Yet another tic tac toe? This is a somewhat arguably and debatable more advanced tic tac toe because it uses node.js and socket.io to enable real-time game states sharing among players. In other word, this is an online version! Simply share the link with your opponent and you are good to go!",
                     image: "images/tictactoe.png",
                     url: "http://tic-tac-toe-online.herokuapp.com"
                 },
