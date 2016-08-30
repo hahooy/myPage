@@ -51,7 +51,7 @@ h3 {
 }
 
 h4 {
-    font-size: 25px;
+    font-size: 20px;
     padding-bottom: 5px;
     font-weight: 400;
     color: #000;
@@ -88,6 +88,7 @@ p {
 }
 
 a {
+    font-size: 16px;
     color: #3D9CCC;
     text-decoration: none;
     margin-top: 10px;
@@ -179,7 +180,7 @@ ul.nav.navbar-nav.navbar-right > li:hover > a{
 
 .jumbotron {
     height: 100vh;
-    background: no-repeat center right fixed url("../images/background.jpg");
+    background: no-repeat center right fixed url("../images/background2.jpg");
     background-size: cover;
     margin-bottom: 0px;
     padding: 0px;

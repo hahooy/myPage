@@ -90,6 +90,22 @@ var resumeData = {
         jobs:
             [
                 {
+                    employer: "Service Management Group",
+                    website: "http://www.smg.com/",
+                    title: "Software Engineering Intern",
+                    location: "Boston, MA",
+                    date: "Jun 2016 - Sep 2016",
+                    description: "Created new features to improve the back-end visit detection functionality for SurveyMini mobile app."
+                },
+                {
+                    employer: "Monsanto",
+                    website: "http://www.monsanto.com/",
+                    title: "Software Engineering Co-Op",
+                    location: "St. Louis, MO",
+                    date: "Jan 2016 - May 2016",
+                    description: "Developed a Java program to automate Ping ID administration."
+                },
+                {
                     employer: "Virginia Tech",
                     website: "https://www.vt.edu/",
                     title: "Teaching Assistant",
