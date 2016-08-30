@@ -1,35 +1,4 @@
-// %data% will be replaced by content
-var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
-
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
-
-var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<p class="blue-text title">%data%</p>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img class="projectImg" src="%data%">';
-
-var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
-var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
-
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
-var HTMLonlineSchool = ' - %data%</a>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
-
-var internationalizeButton = '<button>Internationalize</button>';
-var googleMap = '<div id="map"></div>';
+"use strict";
 
 /*
  Here's where we generate the custom Google Map for the website.
@@ -47,11 +16,12 @@ function initializeMap() {
     var locations;
 
     var mapOptions = {
-	disableDefaultUI: true
+		disableDefaultUI: true,
+		scrollwheel: false
     };
 
 
-    map = new google.maps.Map(document.querySelector('#map'), mapOptions);
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
 
     /*
@@ -64,21 +34,20 @@ function initializeMap() {
 	var locations = ["Nanning, China", "Piscataway, NJ"];
 
 	// adds the single location property from bio to the locations array
-	locations.push(bio.contacts.Location);
+	locations.push(resumeData.bio.contacts.location);
 
 	// iterates through school locations and appends each location to
 	// the locations array
-	for (var school in education.schools) {
-	    locations.push(education.schools[school].city);
+	for (var school in resumeData.schools) {
+	    locations.push(resumeData.schools[school].city);
 	}
 
 	// iterates through work locations and appends each location to
 	// the locations array
-	for (var job in work.jobs) {
-	    locations.push(work.jobs[job].location);
+	for (var job in resumeData.jobs) {
+	    locations.push(resumeData.jobs[job].location);
 	}
-	
-	console.dir(locations);
+
 	return locations;
     }
 
@@ -107,11 +76,6 @@ function initializeMap() {
 	// about a location.
 	var infoWindow = new google.maps.InfoWindow({
 	    content: name
-	});
-
-	// hmmmm, I wonder what this is about...
-	google.maps.event.addListener(marker, 'click', function() {
-	    // your code goes here!
 	});
 
 	// this is where the pin actually gets added to the map.

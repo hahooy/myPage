@@ -1,4 +1,4 @@
-/* font, margin and padding applied to all pages */
+/* ----------------- font, margin and padding applied to all pages ----------------- */
 body,
 div,
 ul,
@@ -12,7 +12,7 @@ h5,
 h6 {
     padding:0;
     margin:0;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .clear-fix {
@@ -35,10 +35,11 @@ h1 {
 }
 
 h2 {
-    font-weight: bold;
-    font-size: 24px;
+    font-size: 54px;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 20px;
     color: #000;
-    line-height: 29px;
     padding: 10px;
 }
 
@@ -50,15 +51,14 @@ h3 {
 }
 
 h4 {
-    font-weight: bold;
-    font-size: 14px;
-    color: #4a4a4a;
-    line-height: 17px;
+    font-size: 25px;
+    padding-bottom: 5px;
+    font-weight: 400;
+    color: #000;
 }
 
 h2,
 h3,
-h4,
 h5 {
     padding:10px 5%;
 }
@@ -81,9 +81,10 @@ h5 {
 }
 
 p {
-    font-size: 14px;
+    font-size: 16px;
     color: #333;
     line-height: 21px;
+    font-family: soinsanspro, arial;
 }
 
 a {
@@ -107,8 +108,8 @@ a {
     color: #000000;
 }
 
-.gray { 
-    background-color: #F3F3F3; /* dark background color */
+.brown { 
+    background-color: #F3EFE0; /* dark background color */
     padding-bottom: 10px;
     clear:both;
 }
@@ -133,37 +134,102 @@ ul {
     list-style-type: none;
 }
 
-/* style footer */
-div#lets-connect > ul#footerContacts{
-    width: 100%;
+
+/* ----------------- navigation bar ----------------- */
+
+
+#heading-wrapper{
+    background-color: rgba(255, 255, 255, 1);
+    background-image: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 5; /* make sure it is not cover by images of projects and top overlay */
+    border-bottom: 1px solid rgb(153, 153, 153);
 }
 
-div#lets-connect > ul#footerContacts{
-    margin-left: 5%;
+#my-name{
+    font-size: 24px;
+    color: #000;
 }
 
-div#lets-connect > ul#footerContacts:after{
-    content: "";
-    display: table;
-    clear: both;
+#my-name:hover{
+    color: #3D9CCC; 
 }
 
-div#lets-connect > ul#footerContacts > li{
-    float: left;
-    padding: 10px 0;
+#menu-btn:hover{
+    cursor: pointer;             
+    color: #3D9CCC;
+    box-sizing: border-box;
+    border: 2px solid #3D9CCC;
 }
 
-/* style header content */
-#about {
-    padding-top: 100px;
-    margin-bottom: 2%;
+ul.nav.navbar-nav.navbar-right > li:hover{
+    background-color: #3D9CCC;
 }
+
+ul.nav.navbar-nav.navbar-right > li:hover > a{
+    color: #FFFFFF;
+}
+
+
+/* ----------------- style top page ----------------- */
+
+
+.jumbotron {
+    height: 100vh;
+    background: no-repeat center right fixed url("../images/background.jpg");
+    background-size: cover;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.jumbotron .overlay {
+    background-color: #3D9CCC;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    z-index: 2;
+}
+
+@media (max-width: 767px)
+.jumbotron .container {
+    top: 20%;
+    padding-top: 0px;
+}
+
+.jumbotron .container {
+    position: relative;
+    top: 28%;
+    z-index: 4;
+    text-align: center;
+}
+
+.jumbotron .container h1 {
+    font-weight: 700;
+    font-size: 36px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #FFFFFF;
+    border-bottom-color: rgba(255,255,255,0.35);
+    display: inline-block;
+}
+
+
+/* ----------------- style header content ----------------- */
+
 
 .biopic {
-    margin-right: 20px;
-    float: left;
-    width: 220px;
-    height: 220px;
+    margin:auto;
 }
 
 #about > p{
@@ -174,13 +240,30 @@ div#lets-connect > ul#footerContacts > li{
     padding-top: 30px;
 }
 
-/* style projects content */
-#projects-wrapper > div.project-entry{
-    width: 260px;
+
+/* ----------------- style project content ----------------- */
+
+
+div.project-entry{
+    margin-bottom: 5%;
 }
 
-#projects-wrapper > div > p.title{
-    font-size: 18px;
+div.project-entry > * {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+img.projectImg{
+    width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    /* make the zoom in effect more smooth */
+    -moz-transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
 }
 
 div.project-entry > a{
@@ -192,159 +275,90 @@ div.project-entry > a:hover{
     box-shadow: 3px 3px 8px 1px;
 }
 
-img.projectImg{
-    width: 260px;
-    height: 150px;
-    /* make the zoom in effect more smooth */
-    -moz-transition: all .2s ease;
-    -webkit-transition: all .2s ease;
-    -ms-transition: all .2s ease;
-    -o-transition: all .2s ease;
-    transition: all .2s ease;
-}
-
 img.projectImg:hover{
     /* zoom in the image when hover */
     transform: scale(1.3);
 }
 
-div#projects-wrapper{
-    padding-left: 5%;
-    padding-right: 0;
+.project-entry h4, .project-entry p {
+    text-align: left;
 }
 
-div.project-entry{
-    padding: 1% 1%;
-    display: inline-block;
+.project-entry h4 {
+    border-bottom: 1px solid #000000;
 }
 
-/* style the drop down menu */
 
-div#menu-container{
-    position: fixed;
-    right: 0px;
-    width: 200px;
-    height: 100%;
-    background-color: rgba(38, 119, 185, 0.5);
-    z-index: 2;
-}
+/* ----------------- style map ----------------- */
 
-div#menu-container > a{    
-    background-color: rgba(63, 66, 69, 0.5);
-    color: rgb(255,255,255);
-    margin: 2px 0px;
-    padding: 5% 30%;
-    font-size: large;
-    font-weight: bold;
-}
-
-div#menu-container > a:hover{
-    background-color: rgba(255, 255, 255, 1);
-    color: rgb(63, 66, 69);
-}
-
-div#menu-cover{
-    position: fixed;
-    background-color: rgba(38, 119, 185, 0.05);
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-div#menu-container > span#close{
-    font-size: 28px;
-    display: inline-block;
-    margin-top: 2%;
-    margin-left: 2%;
-    margin-bottom: 30%;
-}
-
-div#menu-container > span#close:hover{
-    cursor: pointer;		     
-    color: rgb(255,255,255);
-}
-
-/* make the element(e.g. menu, header) disappear */
-.trans{
-    display: none;
-}
-
-/* navigation bar */
-#heading-wrapper:after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-#heading-wrapper{
-    background-color: rgba(255, 255, 255, 1);
-    background-image: none;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    z-index: 1; /* make sure it is not cover by images of projects */
-    border-bottom: 1px solid rgb(153, 153, 153);
-}
-
-#name{
-    font-size: 24px;
-    color: #000;
-}
-
-#name:hover{
-    color: #3D9CCC; 
-}
-
-#menu-btn:hover{
-    cursor: pointer;		     
-    color: #3D9CCC;
-    box-sizing: border-box;
-    border: 2px solid #3D9CCC;
-}
-
-/* Media queries to handle various device widths */
-
-@media only screen and (max-width: 1024px) {
-    #lets-connect {
-	margin-top: 5%;
-    }
-}
-
-@media only screen and (max-width:900px) {
-    .biopic {
-	width: 175px;
-    }
-}
-
-@media only screen and (max-width: 750px) {
-    #lets-connect {
-	margin-top: 10%;
-    }
-    .biopic {
-	width: 150px;
-    }
-    .welcome-message {
-	display: none;
-    }
-}
-
-@media only screen and (min-width: 750px) {
-    #skills-h3,
-    .biopic {
-	display: block;
-    }
-}
 
 #map {
     display: block;
-    height: 100%;
-    margin: 0 5%;
+    height: 300px;
+    margin: 0;
 }
 
 #map-div {
-    height: 400px;
     width: 100%;
-    padding-bottom: 5%;
+    margin-bottom: 5%;
 }
 
+/* Ensure the map is contained within its parent div. */
+#map-div:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* ----------------- style footer ----------------- */
+
+
+
+/* ----------------- style everything else ----------------- */
+
+
+/* make the element(e.g. menu, header) disappear */
+.trans {
+    display: none;
+}
+
+/* draw a line */
+hr {
+    margin: 40px 0px;
+    border-color: #727878;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+
+.block {
+    display: inline-block;
+    padding: 10px;
+    margin: 2px;
+    background-color: #3D9CCC;
+    color: #FFFFFF;
+    /*color: #5b4844;*/
+}
+
+.container {
+    max-width: 1280px;
+    padding: 20px 120px;
+}
+
+.inline-link {
+    display: inline;
+}
+
+/* Truncate long string or url to prevent overflow. */
+.ellipses {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 998px) {
+    .container {
+        padding: 20px 20px;
+        min-width: 280px;
+    }
+}
