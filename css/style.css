@@ -255,6 +255,10 @@ div.project-entry > * {
     margin-right: 5%;
 }
 
+div.project-entry p {
+    text-align: justify;
+}
+
 img.projectImg{
     width: 100%;
     height: auto;

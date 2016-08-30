@@ -62,7 +62,7 @@ var resumeData = {
                     city: "St. Louis, MO",
                     degree: "M.Eng.",
                     majors: "Computer Science and Engineering",
-                    date: "Expected Dec 2016",
+                    date: "Expected May 2017",
                     url: "http://wustl.edu",
                     description: ""
                 },
@@ -119,6 +119,34 @@ var resumeData = {
         projects:
             [
                 {
+                    title: "Angler Companian",
+                    dates: "2016",
+                    description: "Angler Companian is a photo and location sharing iOS social app for anglers. Featuring channels, real-time photo and location sharing, length measurement on photo and more. Recording your fishing spots and sharing your exciting moments have never been this easy!",
+                    image: "images/locatorcam.jpg",
+                    url: "http://hahooy.github.io/LocatorCam/"
+                },
+                {
+                    title: "UniSound",
+                    dates: "2015",
+                    description: "<strong>Awarded AT&T Prize for Best Mobile App at WUHack 2015</strong><br/>A social jukebox web app allowing users to share music to a group speaker system.",
+                    image: "images/blackSquareLogo.png",
+                    url: "http://hahooy.github.io/wuhack2015/"
+                },
+              {
+                    title: "Movie Recommendation System",
+                    dates: "2015",
+                    description: "A movie recommendation system for predicting movie ratings of given users. The recommendation system is based on an item-item collabrative filtering algorithm implemented in Hadoop MapReduce. The training data set contains 3.25 million movie ratings provided by Netflix. How good is the algorithm? The root mean square error of the prediction is 0.92, which is the best among the class of 40+ students.",
+                    image: "images/movie_ratings.png",
+                    url: "http://hahooy.github.io/wuhack2015/"
+                },
+                {
+                    title: "Tic-Tac-Toe Online",
+                    dates: "2015",
+                    description: "Yet another tic tac toe? This is a somewhat arguably and debatable more advanced tic tac toe because it uses socket.io to enable real-time game states sharing among players. In other word, this is an online version! Simply share the link with your opponent and you are good to go!",
+                    image: "images/tictactoe.png",
+                    url: "http://tic-tac-toe-online.herokuapp.com"
+                },
+                {
                     title: "Promodoro Clock",
                     dates: "2015",
                     description: "",
@@ -133,53 +161,11 @@ var resumeData = {
                     url: "http://codepen.io/hahooy/full/vOVoyj/"
                 },
                 {
-                    title: "UniSound",
-                    dates: "2015",
-                    description: "<strong>Awarded AT&T Prize for Best Mobile App at WUHack 2015</strong>",
-                    image: "images/blackSquareLogo.png",
-                    url: "http://hahooy.github.io/wuhack2015/"
-                },
-                {
-                    title: "Tic-Tac-Toe Online",
-                    dates: "2015",
-                    description: "",
-                    image: "images/tictactoe.png",
-                    url: "http://tic-tac-toe-online.herokuapp.com"
-                },
-                {
-                    title: "Web Calculator",
-                    dates: "2015",
-                    description: "",
-                    image: "images/calculator.png",
-                    url: "http://codepen.io/hahooy/full/zGemeP/"
-                },
-                {
-                    title: "Random Quote Generator",
-                    dates: "2015",
-                    description: "",
-                    image: "images/randomQuoteGen.png",
-                    url: "http://codepen.io/hahooy/full/gpdWLM/"
-                },
-                {
-                    title: "Cat Clicker",
-                    dates: "2015",
-                    description: "",
-                    image: "images/catClicker.png",
-                    url: "http://hahooy.github.io/catClicker/"
-                },
-                {
                     title: "Catch Goblins",
                     dates: "2015",
-                    description: "",
+                    description: "Ever want to catch some goblins? Try out this HTML5 game!",
                     image: "images/catchGoblins.png",
                     url: "http://hahooy.github.io/simple_canvas_game/"
-                },
-                {
-                    title: "Arcade Game",
-                    dates: "2015",
-                    description: "",
-                    image: "images/arcadeGame.png",
-                    url: "http://hahooy.github.io/frontend-nanodegree-arcade-game/"
                 }
             ]
 };
