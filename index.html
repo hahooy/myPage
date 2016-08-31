@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans" rel="stylesheet">
   <!-- Customized Stylesheet-->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -95,6 +97,7 @@
         <hr>
       </div>
       <div id="project-container" class="container">
+      <div class="grid">
       </div>
     </div>
 
@@ -107,7 +110,7 @@
       <div id="school-container" class="container">
         <script id="school-template" type="text/x-handlebars-template">
           {{#schools}}
-          <div class="row">
+          <div class="row section">
             <div class="col-md-4">
               <h4>{{name}}</h4>
               <p>{{date}}</p>
@@ -141,7 +144,7 @@
       <div id="work-container" class="container">
         <script id="work-template" type="text/x-handlebars-template">
           {{#jobs}}
-          <div class="row">
+          <div class="row section">
             <div class="col-md-4">
               <h4>{{employer}}</h4>
               <p>{{date}}</p>
@@ -224,11 +227,13 @@
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <!-- Bootsrap js -->
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <!-- Google maps api -->
+  <!-- Google maps api for the map part -->
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-  <!-- handlebars -->
+  <!-- handlebars for html templating -->
   <script type="text/javascript" src="bower_components/handlebars/handlebars.js"></script>
-  <!-- Customized js -->
+  <!-- masonry, for organizing all the projects -->
+  <script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+  <!-- customized js -->
   <script src="js/data.js"></script>
   <script src="js/helper.js"></script>
   <script src="js/renderer.js"></script>

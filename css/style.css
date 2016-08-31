@@ -84,7 +84,7 @@ p {
     font-size: 16px;
     color: #333;
     line-height: 21px;
-    font-family: soinsanspro, arial;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -244,6 +244,19 @@ ul.nav.navbar-nav.navbar-right > li:hover > a{
 
 /* ----------------- style project content ----------------- */
 
+/* ---- grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+    .grid-sizer,
+    .grid-item {
+        width: 100%;
+    }
+}
 
 div.project-entry{
     margin-bottom: 5%;
@@ -316,8 +329,12 @@ img.projectImg:hover{
 }
 
 
-/* ----------------- style footer ----------------- */
+/* ----------------- style experience ----------------- */
 
+
+.section {
+    margin-bottom: 5%;
+}
 
 
 /* ----------------- style everything else ----------------- */
@@ -342,7 +359,6 @@ hr {
     margin: 2px;
     background-color: #3D9CCC;
     color: #FFFFFF;
-    /*color: #5b4844;*/
 }
 
 .container {

@@ -65,18 +65,20 @@ function renderStack(stack) {
 
 
 function renderProjects(projects) {
-    var HTMLProjectRow = '<div class="row"></div>';
-    var HTMLProjectCol = '<div class="col-xs-12 col-sm-6 text-center project-entry"></div>';
+    var HTMLProjectRow = '<div class="grid"></div>';
+    var HTMLProjectCol = '<div class="grid-item text-center project-entry"></div>';
     var HTMLProjectLink = '<a class="image-container" href="%link%"><img class="projectImg" src="%data%"></a>';
     var ctr = 0;
     var $row = $(HTMLProjectRow);
+    $row.append('<div class="grid-sizer"></div>')
     $('#project-container').append($row);
     projects.forEach(function(project) {
+        /*
         if (ctr >= 2) {
             ctr = 0;
             $row = $(HTMLProjectRow);
             $('#project-container').append($row);
-        }
+        }*/
         var $col = $(HTMLProjectCol);
         $col.append('<h4>' + project.title + '</h4>');
         $col.append('<p>' + project.description + '</p>');
@@ -158,3 +160,14 @@ function renderAll() {
 }
 
 renderAll();
+
+$(window).on('load', function() {
+    // Wait until all the images loaded before applying masonry to the grid.
+    // Otherwise masonry gets confused because it doesn't know the heights of
+    // those images.
+    $('.grid').masonry({
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true
+    });
+});

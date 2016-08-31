@@ -58,7 +58,7 @@ var resumeData = {
         schools:
             [
                 {
-                    name: "Washington University in St. Louis",
+                    name: "WashU",
                     city: "St. Louis, MO",
                     degree: "M.Eng.",
                     majors: "Computer Science and Engineering",
@@ -95,7 +95,7 @@ var resumeData = {
                     title: "Software Engineering Intern",
                     location: "Boston, MA",
                     date: "Jun 2016 - Sep 2016",
-                    description: "Created new features to improve the back-end visit detection functionality for SurveyMini mobile app."
+                    description: "I worked as an intern at SMG's boston office, which is focusing on understanding customer behaviors using a big data solution. I was involved in a couple of projects and working collaboratively with senior software engineers in a fast paced, agile environment. I created new features to improve the back-end visit detection functionality for SurveyMini mobile app. I also developed web scrapers and used third-party APIs to mine the data we need for the backend system. To improve the reliability of back-end infrastructure, I was involved in debugging programs and developing utility scripts. I also implemented a dashboard web application to provide information to customer services."
                 },
                 {
                     employer: "Monsanto",
@@ -103,7 +103,7 @@ var resumeData = {
                     title: "Software Engineering Co-Op",
                     location: "St. Louis, MO",
                     date: "Jan 2016 - May 2016",
-                    description: "Developed a Java program to automate Ping ID administration."
+                    description: "I was working on the enterprise identity management team in Monsanto. One major project that I worked on was to develope a node.js based web application for employees' information lookup. I made significant contribution to the project and pushed the app to beta test stage by the time I left. A JavaScript library we developed for this app was published to npm as a open source package. Another project I worked on was to migrate employees to a new identity access management system. I implemented a Java program to automate the migration process (if I could do this again I will do in a scripting language like Python...)."
                 },
                 {
                     employer: "Virginia Tech",
