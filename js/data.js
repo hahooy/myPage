@@ -18,7 +18,7 @@ var resumeData = {
                 location: "St Louis",
                 resume: "https://drive.google.com/file/d/0B1uHglPYIL0yd1lmN1RfTktvalk/view?usp=sharing"
             },
-            bioPic: "images/me-circle.png",
+            bioPic: "images/me-circle.jpg",
             welcomeMessage: "Welcome to my website! " +
                             "I am a software development enthusiast with experience in " +
                             "full-stack web and mobile application development. I am currently " +
