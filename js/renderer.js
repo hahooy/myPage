@@ -64,29 +64,16 @@ function renderStack(stack) {
 }
 
 
+function renderMainContent(data) {
+    var source   = $("#content-template").html();
+    var template = Handlebars.compile(source);
+    $("#main").append(template(data));
+}
+
 function renderProjects(projects) {
-    var HTMLProjectRow = '<div class="grid"></div>';
-    var HTMLProjectCol = '<div class="grid-item text-center project-entry"></div>';
-    var HTMLProjectLink = '<a class="image-container" href="%link%"><img class="projectImg" src="%data%"></a>';
-    var ctr = 0;
-    var $row = $(HTMLProjectRow);
-    $row.append('<div class="grid-sizer"></div>')
-    $('#project-container').append($row);
-    projects.forEach(function(project) {
-        /*
-        if (ctr >= 2) {
-            ctr = 0;
-            $row = $(HTMLProjectRow);
-            $('#project-container').append($row);
-        }*/
-        var $col = $(HTMLProjectCol);
-        $col.append('<h4>' + project.title + '</h4>');
-        $col.append('<p>' + project.description + '</p>');
-        $col.append(HTMLProjectLink.replace("%link%", project.url).
-                    replace("%data%", project.image));
-        $row.append($col);
-        ctr += 1;
-    });
+    var source   = $("#project-template").html();
+    var template = Handlebars.compile(source);
+    $("#project-container").append(template(resumeData));
 }
 
 
@@ -149,17 +136,11 @@ function headerScrollControl() {
 };
 
 
-function renderAll() {
-    renderAbout();
-    renderStack(resumeData.stack);
-    renderProjects(resumeData.projects);
-    renderWork();
-    renderSchools();
-    renderContact();
-    headerScrollControl();
-}
+renderMainContent(resumeData);
+// the stack part is too complicated for handlebars, better do it in JavaScript.
+renderStack(resumeData.stack);
+headerScrollControl();
 
-renderAll();
 
 $(window).on('load', function() {
     // Wait until all the images loaded before applying masonry to the grid.

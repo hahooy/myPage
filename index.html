@@ -24,7 +24,7 @@
 
   <!-- main content of the website -->
   <div id="main">
-
+    <script id="content-template" type="text/x-handlebars-template">
     <!-- navigation bar -->
     <nav id="heading-wrapper" class="navbar navbar-default">
       <div class="navbar-header">
@@ -54,7 +54,6 @@
 
     <!-- about me -->
     <div id="about">
-      <script id="about-template" type="text/x-handlebars-template">
       <div class="container">
         <h2>About Me</h2>
         <hr>
@@ -69,7 +68,6 @@
           </div>
         </div>
       </div>
-      </script>
     </div>
 
     <!-- technology stack -->
@@ -97,7 +95,18 @@
         <hr>
       </div>
       <div id="project-container" class="container">
-      <div class="grid">
+
+        <div class="grid">
+          <div class="grid-sizer"></div>
+          {{#projects}}
+          <div class="grid-item text-center project-entry">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>
+            <a class="image-container" href="{{url}}"><img class="projectImg" src="{{image}}"></a>
+          </div>
+          {{/projects}}
+        </div>
+
       </div>
     </div>
 
@@ -108,30 +117,28 @@
         <hr>
       </div>
       <div id="school-container" class="container">
-        <script id="school-template" type="text/x-handlebars-template">
-          {{#schools}}
-          <div class="row section">
-            <div class="col-md-4">
-              <h4>{{name}}</h4>
-              <p>{{date}}</p>
-            </div>
-            <div class="col-md-8">
-              <p>
-                <strong>{{degree}} - {{majors}}</strong>
-              </p>
-              <p class='blue-text'>
-                <i class="fa fa-map" aria-hidden="true"></i>
-                {{city}}
-                <span>  |  </span>
-                <a class="inline-link" href="{{website}}">
-                  <i class="fa fa-external-link" aria-hidden="true"> {{url}} </i>
-                </a>
-              </p>
-              <p>{{description}}</p>
-            </div>
+        {{#schools}}
+        <div class="row section">
+          <div class="col-md-4">
+            <h4>{{name}}</h4>
+            <p>{{date}}</p>
           </div>
-          {{/schools}}
-        </script>
+          <div class="col-md-8">
+            <p>
+              <strong>{{degree}} - {{majors}}</strong>
+            </p>
+            <p class='blue-text'>
+              <i class="fa fa-map" aria-hidden="true"></i>
+              {{city}}
+              <span>  |  </span>
+              <a class="inline-link" href="{{website}}">
+                <i class="fa fa-external-link" aria-hidden="true"> {{url}} </i>
+              </a>
+            </p>
+            <p>{{description}}</p>
+          </div>
+        </div>
+        {{/schools}}
       </div>
     </div>
 
@@ -142,30 +149,28 @@
         <hr>
       </div>
       <div id="work-container" class="container">
-        <script id="work-template" type="text/x-handlebars-template">
-          {{#jobs}}
-          <div class="row section">
-            <div class="col-md-4">
-              <h4>{{employer}}</h4>
-              <p>{{date}}</p>
-            </div>
-            <div class="col-md-8">
-              <p>
-                <strong>{{title}}</strong>
-              </p>
-              <p class='blue-text'>
-                <i class="fa fa-map" aria-hidden="true"></i>
-                {{location}}
-                <span>  |  </span>
-                <a class="inline-link" href="{{website}}">
-                  <i class="fa fa-external-link" aria-hidden="true"> {{website}} </i>
-                </a>
-              </p>
-              <p>{{description}}</p>
-            </div>
+        {{#jobs}}
+        <div class="row section">
+          <div class="col-md-4">
+            <h4>{{employer}}</h4>
+            <p>{{date}}</p>
           </div>
-          {{/jobs}}
-        </script>
+          <div class="col-md-8">
+            <p>
+              <strong>{{title}}</strong>
+            </p>
+            <p class='blue-text'>
+              <i class="fa fa-map" aria-hidden="true"></i>
+              {{location}}
+              <span>  |  </span>
+              <a class="inline-link" href="{{website}}">
+                <i class="fa fa-external-link" aria-hidden="true"> {{website}} </i>
+              </a>
+            </p>
+            <p>{{description}}</p>
+          </div>
+        </div>
+        {{/jobs}}
       </div>
     </div>
 
@@ -180,7 +185,6 @@
 
     <!-- contact -->
     <div id="contact" class="brown">
-      <script id="contact-template" type="text/x-handlebars-template">
       <div class="container">
         <h2>Contact</h2>
         <hr>
@@ -218,8 +222,8 @@
         {{/bio.contacts}}
         </div>
       </div>
-      </script>
     </div>
+    </script>
 
   </div>
 
