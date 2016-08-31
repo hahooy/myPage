@@ -4,13 +4,6 @@ Render data on the front end.
 ---------------------------------------- */
 
 
-function renderAbout() {
-    var source   = $("#about-template").html();
-    var template = Handlebars.compile(source);
-    $("#about").append(template(resumeData));
-}
-
-
 function renderStack(stack) {
     var categories = stack["categories"];
     var proficiencies = stack["proficiencies"];
@@ -68,33 +61,6 @@ function renderMainContent(data) {
     var source   = $("#content-template").html();
     var template = Handlebars.compile(source);
     $("#main").append(template(data));
-}
-
-function renderProjects(projects) {
-    var source   = $("#project-template").html();
-    var template = Handlebars.compile(source);
-    $("#project-container").append(template(resumeData));
-}
-
-
-function renderSchools() {
-    var source   = $("#school-template").html();
-    var template = Handlebars.compile(source);
-    $("#school-container").append(template(resumeData));
-}
-
-
-function renderWork() {
-    var source   = $("#work-template").html();
-    var template = Handlebars.compile(source);
-    $("#work-container").append(template(resumeData));
-}
-
-
-function renderContact() {
-    var source = $("#contact-template").html();
-    var template = Handlebars.compile(source);
-    $("#contact").append(template(resumeData));
 }
 
 
